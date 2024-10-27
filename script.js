@@ -22,3 +22,10 @@ document.getElementById('reportForm').addEventListener('submit', function(event)
     alert('Ваше повідомлення відправлено! Поліція Негровки реагуватиме негайно.');
     this.reset();
 });
+
+button.addEventListener("click", async function () {
+    // Легка операція, яка не блокує
+    // ...
+    await someHeavyFunction();
+});
+
