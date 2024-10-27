@@ -11,7 +11,7 @@
         const email = document.getElementById('email').value;
 
         // Заміна service_id та template_id
-        emailjs.send("ваш_service_id", "ваш_template_id", { // Заміна тут
+        emailjs.send("service_2y41nn7", "template_vxwpcik", { // Заміна тут
             name: name,
             address: address,
             incident: incident,
