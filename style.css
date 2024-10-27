@@ -61,40 +61,17 @@ main {
     margin-bottom: 20px;
 }
 
-.news-item {
-    background: #f1f1f1;
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 10px;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-}
-
-.news-item h3 {
-    margin: 0;
-    color: #003366;
-}
-
-.news-item p {
-    margin: 5px 0;
-}
-
-.date {
-    font-size: 0.85em;
-    color: #666;
-    text-align: right;
-}
-
 #reportForm {
-    background-color: #e3f2fd; /* Зміна на світло-синій */
+    background-color: #e3f2fd;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(3, 169, 244, 0.3); /* Зміна на темно-синій */
+    box-shadow: 0 2px 10px rgba(3, 169, 244, 0.3);
     max-width: 600px;
     margin: auto;
 }
 
 #reportForm label {
-    color: #0d47a1; /* Темно-синій */
+    color: #0d47a1;
     font-weight: bold;
     margin-top: 10px;
     display: block;
@@ -103,14 +80,14 @@ main {
 #reportForm input, #reportForm textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #0d47a1; /* Темно-синій */
+    border: 1px solid #0d47a1;
     border-radius: 5px;
     margin-top: 5px;
     margin-bottom: 15px;
 }
 
 #reportForm button {
-    background-color: #0d47a1; /* Темно-синій */
+    background-color: #0d47a1;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -121,7 +98,7 @@ main {
 }
 
 #reportForm button:hover {
-    background-color: #1565c0; /* Трохи світліший темно-синій */
+    background-color: #1565c0;
 }
 
 footer {
