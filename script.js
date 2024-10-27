@@ -1,13 +1,26 @@
-function showSection(sectionId) {
-    const sections = document.querySelectorAll('.section');
-    sections.forEach(section => {
-        section.style.display = 'none';
-    });
-    document.getElementById(sectionId).style.display = 'block';
-}
+<script>
+    (function() {
+        emailjs.init("DniaC6TcZSvJijmVZ"); // Замініть DniaC6TcZSvJijmVZ на ваш Public Key від EmailJS
+    })();
 
-document.getElementById('reportForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    alert('Ваше повідомлення відправлено! Поліція Негровки реагуватиме негайно.');
-    this.reset();
-}); 
+    document.getElementById('crimeReportForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const name = document.getElementById('name').value;
+        const address = document.getElementById('address').value;
+        const incident = document.getElementById('incident').value;
+        const email = document.getElementById('email').value;
+
+        // Заміна service_id та template_id
+        emailjs.send("ваш_service_id", "ваш_template_id", { // Заміна тут
+            name: name,
+            address: address,
+            incident: incident,
+            email: email
+        }).then(response => {
+            alert('Ваше повідомлення відправлено! Поліція Негровки реагуватиме негайно.');
+            document.getElementById('crimeReportForm').reset();
+        }, error => {
+            alert('Помилка при відправці повідомлення. Спробуйте ще раз.');
+        });
+    });
+</script>
