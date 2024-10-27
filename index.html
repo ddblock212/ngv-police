@@ -1,10 +1,10 @@
+<!DOCTYPE html>
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Поліція Негровки</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </head>
 <body>
     <header>
@@ -31,26 +31,7 @@
 
         <section id="news" class="section" style="display: none;">
             <h2>Останні новини</h2>
-            <article class="news-item">
-                <h3>Загадкове вбивство</h3>
-                <p>Сьогодні в Котинвільську сталося загадкове вбивство: на території будівельного майданчика знайшли мертвим 56-річного працівника Браяна Філіпса...</p>
-                <p class="date">27 жовтня 2024</p>
-            </article>
-            <article class="news-item">
-                <h3>Замах на президента Негровки</h3>
-                <p>Президент Джордан Коробчук, виступаючи сьогодні у Піттсбурзі на підтримку свободи Негровки, став жертвою серйозного замаху...</p>
-                <p class="date">26 жовтня 2024</p>
-            </article>
-            <article class="news-item">
-                <h3>Обшук будинка репера RMA</h3>
-                <p>Під час обшуку будинку репера було знайдено шокуючу кількість наркотиків...</p>
-                <p class="date">23 жовтня 2024</p>
-            </article>
-            <article class="news-item">
-                <h3>Вбивство актриси</h3>
-                <p>Сьогодні в Абжурську, у престижному готелі Tree Plaza, сталося жахливе вбивство...</p>
-                <p class="date">23 жовтня 2024</p>
-            </article>
+            <!-- Додай новини тут -->
         </section>
 
         <section id="report" class="section" style="display: none;">
@@ -94,22 +75,13 @@
         <p>&copy; 2024 Поліція Негровки. Всі права захищені.</p>
     </footer>
 
+    <!-- Підключення до EmailJS -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
-        // Ініціалізація EmailJS
         (function() {
-            emailjs.init("DniaC6TcZSvJijmVZ"); // Ваш Public Key від EmailJS
+            emailjs.init("DniaC6TcZSvJijmVZ"); // Замініть на ваш Public Key
         })();
 
-        // Функція для показу секцій
-        function showSection(sectionId) {
-            const sections = document.querySelectorAll('.section');
-            sections.forEach(section => {
-                section.style.display = 'none'; // Сховати всі секції
-            });
-            document.getElementById(sectionId).style.display = 'block'; // Показати вибрану секцію
-        }
-
-        // Обробка форми
         document.getElementById('crimeReportForm').addEventListener('submit', function(event) {
             event.preventDefault();
             const name = document.getElementById('name').value;
@@ -117,7 +89,7 @@
             const incident = document.getElementById('incident').value;
             const email = document.getElementById('email').value;
 
-            emailjs.send("service_2y41nn7", "template_vxwpcik", {
+            emailjs.send("service_9kfj4q5", "template_vxwpcik"Х, {
                 name: name,
                 address: address,
                 incident: incident,
@@ -127,6 +99,7 @@
                 document.getElementById('crimeReportForm').reset();
             }, error => {
                 alert('Помилка при відправці повідомлення. Спробуйте ще раз.');
+                console.error("EmailJS Error: ", error); // Лог для детальної інформації
             });
         });
     </script>
