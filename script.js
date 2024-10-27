@@ -8,6 +8,19 @@ function showSection(sectionId) {
 
 document.getElementById('reportForm').addEventListener('submit', function(event) {
     event.preventDefault();
-    alert('Ваше повідомлення відправлено! Поліція Негровки реагуватиме негайно.');
-    this.reset();
+
+    const templateParams = {
+        name: document.getElementById('name').value,
+        address: document.getElementById('address').value,
+        incident: document.getElementById('incident').value,
+    };
+
+    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+        .then(function(response) {
+            alert('Ваше повідомлення відправлено успішно!');
+            document.getElementById('reportForm').reset();
+        }, function(error) {
+            alert('Помилка при надсиланні повідомлення.');
+            console.log('FAILED...', error);
+        });
 });
