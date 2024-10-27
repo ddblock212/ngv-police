@@ -1,0 +1,64 @@
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поліція Негровки</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Поліція Негровки</h1>
+        <p>Мережа поліції та СБН для безпеки Негровки з 1967 року</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showSection('home')">Головна</a></li>
+            <li><a href="#" onclick="showSection('report')">Повідомити про злочин</a></li>
+            <li><a href="#" onclick="showSection('contacts')">Контакти</a></li>
+            <li><a href="#" onclick="showSection('info')">Інформація</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="home" class="section">
+            <h2>Вітаємо на сайті Поліції Негровки</h2>
+            <p>Цей сайт створений для підтримки правопорядку та безпеки в регіоні Негровка. Тут ви можете повідомити про події, знайти контакти і дізнатися більше про нашу діяльність.</p>
+        </section>
+
+        <section id="report" class="section" style="display: none;">
+            <h2>Повідомити про злочин</h2>
+            <form id="reportForm">
+                <label for="name">Ім'я:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="address">Адреса:</label>
+                <input type="text" id="address" name="address" required>
+
+                <label for="incident">Що сталося:</label>
+                <textarea id="incident" name="incident" required></textarea>
+
+                <button type="submit">Надіслати</button>
+            </form>
+        </section>
+
+        <section id="contacts" class="section" style="display: none;">
+            <h2>Контакти</h2>
+            <p>Головна адреса: вул. Чайкова, 15, Абжурськ, Негровка</p>
+            <p>Телефон: +912 096 491 11 03</p>
+            <p>Email: info@police-negrovka.gov</p>
+        </section>
+
+        <section id="info" class="section" style="display: none;">
+            <h2>Інформація</h2>
+            <p>Поліція Негровки — мережа відділів поліції та служб безпеки Негровки, яка забезпечує правопорядок і захист громадян із 1967 року. Її створення стало частиною масштабної програми безпеки, ініційованої тодішнім президентом для зменшення рівня злочинності та підтримки стабільності в регіоні. За час існування структури було затримано понад 100 тисяч правопорушників, а поліція Негровки набула статусу головної захисної сили країни.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Поліція Негровки. Всі права захищені.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
