@@ -1,8 +1,19 @@
 <script>
+    // Ініціалізація EmailJS
     (function() {
-        emailjs.init("DniaC6TcZSvJijmVZ"); // Замініть DniaC6TcZSvJijmVZ на ваш Public Key від EmailJS
+        emailjs.init("DniaC6TcZSvJijmVZ"); // Ваш Public Key від EmailJS
     })();
 
+    // Функція для показу секцій
+    function showSection(sectionId) {
+        const sections = document.querySelectorAll('.section');
+        sections.forEach(section => {
+            section.style.display = 'none'; // Сховати всі секції
+        });
+        document.getElementById(sectionId).style.display = 'block'; // Показати вибрану секцію
+    }
+
+    // Обробка форми
     document.getElementById('crimeReportForm').addEventListener('submit', function(event) {
         event.preventDefault();
         const name = document.getElementById('name').value;
@@ -10,8 +21,7 @@
         const incident = document.getElementById('incident').value;
         const email = document.getElementById('email').value;
 
-        // Заміна service_id та template_id
-        emailjs.send("service_2y41nn7", "template_vxwpcik", { // Заміна тут
+        emailjs.send("service_2y41nn7", "template_vxwpcik", {
             name: name,
             address: address,
             incident: incident,
