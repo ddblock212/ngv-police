@@ -1,10 +1,10 @@
-<!DOCTYPE html>
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Поліція Негровки</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </head>
 <body>
     <header>
@@ -94,14 +94,22 @@
         <p>&copy; 2024 Поліція Негровки. Всі права захищені.</p>
     </footer>
 
-    <!-- Підключення до EmailJS -->
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script src="script.js"></script>
     <script>
+        // Ініціалізація EmailJS
         (function() {
-            emailjs.init("DniaC6TcZSvJijmVZ"); // Замініть YOUR_PUBLIC_KEY на ваш Public Key від EmailJS
+            emailjs.init("DniaC6TcZSvJijmVZ"); // Ваш Public Key від EmailJS
         })();
 
+        // Функція для показу секцій
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.style.display = 'none'; // Сховати всі секції
+            });
+            document.getElementById(sectionId).style.display = 'block'; // Показати вибрану секцію
+        }
+
+        // Обробка форми
         document.getElementById('crimeReportForm').addEventListener('submit', function(event) {
             event.preventDefault();
             const name = document.getElementById('name').value;
