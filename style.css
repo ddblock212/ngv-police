@@ -1,135 +1,117 @@
-body {
-    font-family: 'Arial', sans-serif;
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #001f3f; /* Темно-синій фон */
+    color: #ffffff; /* Білий текст */
 }
 
 header {
-    background: #003366;
+    background: #003366; /* Темно-синій заголовок */
     color: #ffffff;
-    padding: 20px 0;
+    padding: 20px;
     text-align: center;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2.5em;
+    border-bottom: 3px solid #0056b3; /* Обводка заголовка */
 }
 
 nav {
-    background: #002244;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    background: #004080; /* Темно-синій навігаційний бар */
+    color: #ffffff;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
+    text-align: center;
 }
 
 nav ul li {
+    display: inline;
     margin: 0 15px;
 }
 
 nav ul li a {
-    text-decoration: none;
     color: #ffffff;
-    font-weight: bold;
-    padding: 15px 20px;
+    text-decoration: none;
+    padding: 10px 15px;
     transition: background 0.3s;
 }
 
 nav ul li a:hover {
-    background: #0055a5;
+    background: #0056b3; /* Світліший темно-синій при наведенні */
     border-radius: 5px;
 }
 
 main {
-    max-width: 900px;
-    margin: 20px auto;
     padding: 20px;
-    background: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.section {
-    margin-bottom: 20px;
-}
-
-.news-item {
-    background: #f1f1f1;
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 10px;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-}
-
-.news-item h3 {
-    margin: 0;
-    color: #003366;
-}
-
-.news-item p {
-    margin: 5px 0;
-}
-
-.date {
-    font-size: 0.85em;
-    color: #666;
-    text-align: right;
-}
-
-#reportForm {
-    background-color: #e3f2fd; /* Зміна на світло-синій */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(3, 169, 244, 0.3); /* Зміна на темно-синій */
-    max-width: 600px;
+    max-width: 800px;
     margin: auto;
 }
 
-#reportForm label {
-    color: #0d47a1; /* Темно-синій */
-    font-weight: bold;
-    margin-top: 10px;
-    display: block;
+.section {
+    background: #003366; /* Темно-синій фон секцій */
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border: 2px solid #0056b3; /* Обводка секцій */
 }
 
-#reportForm input, #reportForm textarea {
+h2 {
+    margin-bottom: 15px;
+    color: #ffffff; /* Білий текст для заголовків */
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #0d47a1; /* Темно-синій */
-    border-radius: 5px;
-    margin-top: 5px;
-    margin-bottom: 15px;
+    border: 1px solid #0056b3; /* Темно-синя обводка для полів вводу */
+    border-radius: 4px;
+    background-color: #002b36; /* Темний фон для полів вводу */
+    color: #ffffff; /* Білий текст для полів вводу */
+    transition: border-color 0.3s;
 }
 
-#reportForm button {
-    background-color: #0d47a1; /* Темно-синій */
-    color: #fff;
-    padding: 10px 20px;
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #007bff; /* Світліша обводка при фокусі */
+    outline: none;
+}
+
+button {
+    background: #007bff; /* Світліший синій колір для кнопки */
+    color: #ffffff;
+    padding: 10px 15px;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
-    font-weight: bold;
     transition: background 0.3s;
 }
 
-#reportForm button:hover {
-    background-color: #1565c0; /* Трохи світліший темно-синій */
+button:hover {
+    background: #0056b3; /* Світліший темно-синій при наведенні */
 }
 
 footer {
     text-align: center;
-    padding: 20px 0;
-    background: #003366;
+    padding: 20px;
+    background: #003366; /* Темно-синій футер */
     color: #ffffff;
+    border-top: 3px solid #0056b3; /* Обводка футера */
     position: relative;
     bottom: 0;
     width: 100%;
-}.
+}
